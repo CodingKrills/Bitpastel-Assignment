@@ -1,0 +1,301 @@
+
+<style>
+
+  /* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar1 , #snackbar2, #snackbar3, #snackbar4, #snackbar5  {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #5093ffb7; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar1.show, #snackbar2.show, #snackbar3.show, #snackbar4.show, #snackbar4.show, #snackbar5.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+button{
+  background: rgba(137, 43, 226, 0);
+  border: rgba(137, 43, 226, 0);
+  color: #f2f2f2;
+  font-size: 28px;
+  cursor: pointer;
+}
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+  body{
+    background-image: url(/img/background.jpg);
+  }
+  #customers {
+    font-size: 26px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.527);
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    margin-top:50px ;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #5093ff;
+    color: white;
+  }
+
+  td a{
+    color: #f2f2f2;
+  }
+  </style>
+
+
+<table id="customers">
+  <tr>
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>CITY</th>
+  </tr>
+  <tr>
+    <td><a href="" id="name1" onclick="funcn1()"></a></td>
+    <td><a href="" id="age1"></a></td>
+    <td><button href="" id="city1" onclick="funcc1()"></button></td>
+  </tr>
+  <tr>
+    <td><a href="" id="name2" onclick="funcn2()"></a></td>
+    <td><a href="" id="age2"></a></td>
+    <td><button href="" id="city2" onclick="funcc2()"></button></td>
+  </tr>
+  <tr>
+    <td><a href="" id="name3" onclick="funcn3()"></a></td>
+    <td><a href="" id="age3"></a></td>
+    <td><button href="" id="city3" onclick="funcc3()"></button></td>
+  </tr>
+  <tr>
+    <td><a href="" id="name4" onclick="funcn4()"></a></td>
+    <td><a href="" id="age4"></a></td>
+    <td><button href="" id="city4" onclick="funcc4()"></button></td>
+  </tr>
+  <tr>
+    <td><a href="" id="name5" onclick="funcn5()"></a></td>
+    <td><a href="" id="age5"></a></td>
+    <td><button href="" id="city5" onclick="funcc5()"></button></td>
+  </tr>
+
+</table>
+
+
+
+
+<div id="snackbar1">
+  <span>
+    <p>Kolkata</p>
+  </span>
+</div>
+
+<div id="snackbar2">
+  <span>
+    <p>Delhi</p>
+  </span>
+</div>
+
+<div id="snackbar3">
+  <span>
+    <p>Mumbai</p>
+  </span>
+</div>
+
+<div id="snackbar4">
+  <span>
+    <p>Pune</p>
+  </span>
+</div>
+
+<div id="snackbar5">
+  <span>
+    <p>Hyderabad</p>
+  </span>
+</div>
+
+
+<script>
+
+  myObj = {
+    "obj": [
+
+      { "name": "John", age: 22, "city": "Kolkata" },
+      { "name": "Jane", age: 20, "city": "Delhi" },
+      { "name": "Mario", age: 25, "city": "Mumbai" },
+      { "name": "Peter", age: 18, "city": "Pune" },
+      { "name": "Bob", age: 21, "city": "Hyderabad" }
+
+    ]
+  }
+
+
+
+  var name1 = myObj.obj[0].name;
+  document.getElementById("name1").innerHTML = name1;
+
+  var name2 = myObj.obj[1].name;
+  document.getElementById("name2").innerHTML = name2;
+
+  var name3 = myObj.obj[2].name;
+  document.getElementById("name3").innerHTML = name3;
+
+  var name4 = myObj.obj[3].name;
+  document.getElementById("name4").innerHTML = name4;
+
+  var name5 = myObj.obj[4].name;
+  document.getElementById("name5").innerHTML = name5;
+
+
+
+  var age1 = myObj.obj[0].age;
+  document.getElementById("age1").innerHTML = age1;
+
+  var age2 = myObj.obj[1].age;
+  document.getElementById("age2").innerHTML = age2;
+
+  var age3 = myObj.obj[2].age;
+  document.getElementById("age3").innerHTML = age3;
+
+  var age4 = myObj.obj[3].age;
+  document.getElementById("age4").innerHTML = age4;
+
+  var age5 = myObj.obj[4].age;
+  document.getElementById("age5").innerHTML = age5;
+
+
+
+  var city1 = myObj.obj[0].city;
+  document.getElementById("city1").innerHTML = city1;
+
+  var city2 = myObj.obj[1].city;
+  document.getElementById("city2").innerHTML = city2;
+
+  var city3 = myObj.obj[2].city;
+  document.getElementById("city3").innerHTML = city3;
+
+  var city4 = myObj.obj[3].city;
+  document.getElementById("city4").innerHTML = city4;
+
+  var city5 = myObj.obj[4].city;
+  document.getElementById("city5").innerHTML = city5;
+
+
+  function funcn1(){
+    alert(name1);
+  }
+
+  function funcn2(){
+    alert(name2);
+  }
+
+  function funcn3(){
+    alert(name3);
+  }
+
+  function funcn4(){
+    alert(name4);
+  }
+
+  function funcn5(){
+    alert(name5);
+  }
+
+
+
+  function funcc1() {
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar1");
+
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function funcc2() {
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar2");
+
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function funcc3() {
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar3");
+
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function funcc4() {
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar4");
+
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function funcc5() {
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar5");
+
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+
+</script>

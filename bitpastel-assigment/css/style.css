@@ -1,0 +1,244 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+  }
+  
+  html {
+	overflow-y: scroll;
+  }
+  
+  body {
+    background-image: url(/img/background.jpg);
+	font-family: 'Titillium Web', sans-serif;
+  }
+  
+  a {
+	text-decoration: none;
+	color: #ffffff;
+	-webkit-transition: .5s ease;
+	transition: .5s ease;
+  }
+  a:hover {
+	color: #ffffff;
+  }
+  
+  .form {
+	background: rgba(19, 35, 47, 0.651);
+	padding: 40px;
+	max-width: 450px;
+	margin: 40px auto;
+	border-radius: 4px;
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  }
+  
+  .tab-group {
+	list-style: none;
+	padding: 0;
+	margin: 0px 0 40px 0;
+  }
+  
+  .tab-group:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  .tab-group li a {
+	display: block;
+	text-decoration: none;
+	padding: 15px;
+	background: #2f4972;
+	color: #a0b3b0;
+	font-size: 20px;
+	float: left;
+	width: 50%;
+	text-align: center;
+	cursor: pointer;
+	-webkit-transition: .5s ease;
+	transition: .5s ease;
+  }
+  .tab-group li a:hover {
+	background: #7caeff;
+	color: #ffffff;
+  }
+  .tab-group .active a {
+	background: #4287f5;
+	color: #ffffff;
+  }
+  
+  .tab-content > div:last-child {
+	display: none;
+  }
+  
+  h1 {
+	text-align: center;
+	color: #ffffff;
+	font-weight: 300;
+	margin: 0 0 40px;
+  }
+
+  input, textarea ,select{
+	font-size: 20px;
+	display: inline-block;
+	width: 100%;
+	padding: 5px 10px;
+	background: #fff;
+	border: 1px solid #000000;
+	color: #7a7a7a;
+	border-radius: 0;
+	-webkit-transition: border-color .25s ease, box-shadow .25s ease;
+	transition: border-color .25s ease, box-shadow .25s ease;
+  }
+  
+  .field-wrap {
+	position: relative;
+	margin-bottom: 20px;
+  }
+
+  .rad{
+	max-width: 20px;
+	font-size: larger;
+  }
+
+  .check{
+	max-width: 20px;
+	float: left;
+	font-size: larger;
+  }
+  
+  .top-row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  .top-row > div {
+	float: left;
+	width: 113px;
+	margin-right: 4%;
+  }
+  .top-row > div:last-child {
+	margin: 0;
+  }
+  
+  .button {
+	border: 0;
+	outline: none;
+	border-radius: 0;
+	padding: 14px 0;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	background: #5093ff;
+	color: #ffffff;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	-webkit-appearance: none;
+  }
+
+  .button:hover, .button:focus {
+	background: #7caeff;
+  }
+  
+  .button-block {
+	display: block;
+	width: 100%;
+  }
+  
+  .forgot {
+	margin-top: -17px;
+	text-align: right;
+  }
+  
+  .message{
+	  color: #fff;
+	  font-size: 14px;
+  }
+  .fr{
+	  float: right;
+  }
+  .check-link a{
+	  color: #5093ff;
+  }
+option{
+	color: rgb(133, 133, 133);
+}
+
+
+
+.wrapper {
+	text-align: right;
+}
+.list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+.list-inline li {
+	display: inline-block;
+	padding-right: 0;
+	padding-left: 5px;
+}
+/*---- Genral classes end -------*/
+
+/*Change icons size here*/
+.social-icons .fa {
+	font-size: 1.6em;
+}
+/*Change icons circle size and color here*/
+.social-icons .fa {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: right;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.social-icons.icon-circle .fa{ 
+	border-radius: 50%;
+}
+
+/*Change icons circle size and color here*/
+.social-icons .fa {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.social-icons.icon-circle .fa{ 
+	border-radius: 50%;
+}
+
+.social-icons .fa-facebook,.social-icons .fa-facebook-square{background-color:#3C599F;} 
+.social-icons .fa-linkedin,.social-icons .fa-linkedin-square{background-color:#0085AE;} 
+.social-icons .fa-google-plus,.social-icons .fa-google-plus-square{background-color:#CF3D2E;} 
+
+.fa .fa-user-circle-o{
+	color: cornsilk;
+}
+
+
+
+
+  .icon {
+	position: relative;
+	color: rgb(112, 112, 112);
+	font-size: 16px;
+  }
+  .icon input { text-indent: 32px;}
+  .icon .fa { 
+	position: absolute;
+	top: 10px;
+	left: 10px;
+  }

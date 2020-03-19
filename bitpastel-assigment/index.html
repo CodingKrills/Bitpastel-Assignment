@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration Form</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel='stylesheet' href='https:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+</head>
+<body>
+
+
+    <div class="form">
+      
+        <ul class="tab-group">
+          <li class="tab active">
+            <a href="#signup">Register</a>
+          </li>
+          <li class="tab">
+            <a href="#login">Login</a>
+          </li>
+        </ul>
+        
+        <div class="tab-content">
+          <div id="signup">   
+            
+            <form action="/" method="post">
+            
+            
+              <div class="field-wrap icon">
+                <span class="fa fa-user"></span>
+                <input type="text"  required autocomplete="off" placeholder="First Name">
+              </div>
+          
+              <div class="field-wrap icon">
+                <span class="fa fa-user"></span>
+                <input type="text" required autocomplete="off" placeholder="Last Name"/>
+              </div>
+            
+  
+            <div class="field-wrap icon">
+              <span class="fa fa-envelope"></span>
+              <input type="email" required autocomplete="off" placeholder="Email"/>
+            </div>
+            
+            <div class="field-wrap icon">
+              <span class="fa fa-phone"></span>
+              <input type="number" required autocomplete="off" placeholder="Number"/>
+            </div>
+
+            <div class="field-wrap icon">
+              <span class="fa fa-map-marker"></span>
+              <input type="number" required autocomplete="off" placeholder="Postcode"/>
+            </div>
+
+            <p class="message" >Birthday</p>
+
+            <div class="top-row" >
+
+              <div class="field-wrap">
+                <select>
+                  <option>Month</option>
+                  <option >January</option>
+                  <option >February</option>
+                  <option >March</option>
+                  <option>April</option>
+                  <option >May</option>
+                  <option >June</option>
+                  <option >July</option>
+                  <option>August</option>
+                  <option >September</option>
+                  <option >October</option>
+                  <option >November</option>
+                  <option>December</option>
+                </select>
+              </div>
+
+              <div class="field-wrap">
+                <select>
+                  <option >Day</option>
+                  <option >1</option>
+                  <option >2</option>
+                  <option >3</option>
+                  <option >4</option>
+                  <option >5</option>
+                  <option >6</option>
+                  <option >7</option>
+                  <option >8</option>
+                  <option >9</option>
+                  <option >10</option>
+                  <option >11</option>
+                  <option >12</option>
+                </select>
+              </div>
+
+              <div class="field-wrap">
+                <select>
+                  <option >Year</option>
+                  <option >2000</option>
+                  <option >2001</option>
+                  <option >2002</option>
+                  <option >2003</option>
+                  <option >2004</option>
+                  <option >2005</option>
+                  <option >2006</option>
+                  <option >2007</option>
+                  <option >2008</option>
+                  <option >2009</option>
+                  <option >2010</option>
+                </select>
+              </div>
+
+            </div>
+
+            <p class="message" >Gender</p>
+
+            <div class="top-row">
+            <div class="field-wrap">
+
+            <input class="rad" type="radio" id="male" name="gender" value="male" placeholder="">
+            <label class="message" for="male">Male</label><br>
+            </div>
+            <div class="field-wrap">
+            <input class="rad" type="radio" id="female" name="gender" value="female">
+            <label class="message" for="female">Female</label><br>
+            
+            </div>
+            </div>
+
+            <div class="field-wrap icon">
+              <span class="fa fa-lock"></span>
+              <input type="password" required autocomplete="off" placeholder="Password"/>
+            </div>
+            
+            <div class="field-wrap icon">
+              <span class="fa fa-lock"></span>
+              <input type="password" required autocomplete="off" placeholder="Confirm Password"/>
+            </div>
+
+            <div class="field-wrap">
+            <input class="check" type="checkbox"  value="Yes">
+            <label class="message"> 
+              i accept the <span class="check-link"><a href="">terms</a></span> and 
+              <span class="check-link"><a href="">conditions</a></span>
+            </label><br>
+            </div>
+
+            <button type="submit" class="button button-block">Register</button>
+            
+            </form>
+  
+          </div>
+          
+          <div id="login">   
+
+            <h1><img src="/img/5940186021579605520.svg" alt="" width="150"></h1>
+            
+            <form action="/" method="post">
+            
+            <div class="field-wrap icon">
+              <span class="fa fa-envelope"></span>
+              <input type="email" required autocomplete="off" placeholder="Email" id="username"/>
+            </div>
+            
+            <div class="field-wrap icon">
+              <span class="fa fa-lock"></span>
+              <input type="password" required autocomplete="off" placeholder="Password" id="password"/>
+            </div>
+            
+            <div class="field-wrap">
+              <input class="check" type="checkbox"  value="Yes">
+              <label class="message"> 
+                Remember me
+              </label>
+              <p class="message forgot"><span class="check-link"><a href="#">Forgot Password?</a></span></p>
+              <br>
+            </div>
+            
+            <button class="button button-block" onclick="user1()" >Log In</button>
+            
+            <div class="wrapper">
+            <ul class="social-icons icon-circle list-unstyled list-inline">
+              <li><p class="message">Or Login With</p></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+
+            </form>
+  
+          </div>
+          
+        </div><!--content -->
+        
+  </div> <!-- /form -->
+
+<script src="/scripts/jquery.js"> </script>
+<script src="/scripts/script.js"></script>
+</body>
+</html>
