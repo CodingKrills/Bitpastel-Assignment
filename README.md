@@ -4,7 +4,7 @@ Bitpastel Assignment
 
 1) Git Clone and double click index.html to launch the project 
 
-2) Login Credential (Set it default):
+2) Login Credential (default):
 	Email: test@email.com
 	Pass: 123456
   
